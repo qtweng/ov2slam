@@ -1,5 +1,6 @@
 ## Prerequisites
 
+### Without Docker
 Install ROS (tests have been done with ROS Melodic): http://wiki.ros.org/melodic/Installation
 
 Make sure to source ROS when opening a new terminal (or add to .bashrc):
@@ -15,6 +16,14 @@ Install necessary Python packages (change package names to match ROS version):
 	$ sudo apt install ros-melodic-roslib ros-melodic-rospy ros-melodic-cv-bridge
 	
 To plot the trajectory and calculate ATE, tools from the following library can be used: https://github.com/MichaelGrupp/evo/
+
+### With Docker
+	
+	$ docker build -t ov2slam .
+	$ docker run -it --name ov2slam -v path/to/this/repo:path/on/docker ov2slam
+
+	# source /opt/ros/melodic/setup.bash
+	# source /root/catkin_ws/devel/setup.bash
 
 To perform camera calibration, download and install Matlab (tested with version R2023a): https://www.mathworks.com/products/matlab.html
 
