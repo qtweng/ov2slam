@@ -22,7 +22,7 @@ To plot the trajectory and calculate ATE, tools from the following library can b
 	$ docker build -t ov2slam .
 	$ docker run -it --name ov2slam -v path/to/this/repo:path/on/docker ov2slam
 
-	# source /opt/ros/melodic/setup.bash
+	# source /opt/ros/noetic/setup.bash
 	# source /root/catkin_ws/devel/setup.bash
 
 To perform camera calibration, download and install Matlab (tested with version R2023a): https://www.mathworks.com/products/matlab.html

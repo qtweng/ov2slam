@@ -15,7 +15,6 @@ RUN apt install git libgoogle-glog-dev ros-noetic-roslib ros-noetic-rospy ros-no
 RUN cd /root/catkin_ws/src; git clone https://github.com/ov2slam/ov2slam.git
 RUN cd ~/catkin_ws/src/ov2slam; chmod +x build_thirdparty.sh; ./build_thirdparty.sh
 RUN /bin/bash -c 'cd ~/catkin_ws; sed -i "s|set(WITH_OPENCV_CONTRIB ON)|set(WITH_OPENCV_CONTRIB OFF)|g" /root/catkin_ws/src/ov2slam/CMakeLists.txt; source /opt/ros/noetic/setup.bash; cd /root/catkin_ws; catkin_make --pkg ov2slam'
-RUN source ~/catkin_ws/devel/setup.bash
 
 RUN apt install python3-pip -y
 RUN pip3 install evo --upgrade --no-binary evo
